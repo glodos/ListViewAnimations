@@ -15,6 +15,9 @@
  */
 package com.nhaarman.listviewanimations.itemmanipulation.swipedismiss;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ValueAnimator;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.view.View;
@@ -22,9 +25,6 @@ import android.view.ViewGroup;
 
 import com.nhaarman.listviewanimations.util.AdapterViewUtil;
 import com.nhaarman.listviewanimations.util.ListViewWrapper;
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.AnimatorListenerAdapter;
-import com.nineoldandroids.animation.ValueAnimator;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -215,7 +215,7 @@ public class SwipeDismissTouchListener extends SwipeTouchListener {
     }
 
     /**
-     * An {@link com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener} which applies height animation to given {@link android.view.View}.
+     * An {@link android.animation.ValueAnimator.AnimatorUpdateListener} which applies height animation to given {@link android.view.View}.
      */
     private static class DismissAnimatorUpdateListener implements ValueAnimator.AnimatorUpdateListener {
 

@@ -15,11 +15,11 @@
  */
 
 apply plugin: 'com.android.library'
-apply plugin: 'github-pages'
-
-apply from: '../pushMaven.gradle'
-apply from: '../generateJavadoc.gradle'
-apply from: '../publishGhPages.gradle'
+//apply plugin: 'github-pages'
+//
+//apply from: '../pushMaven.gradle'
+//apply from: '../generateJavadoc.gradle'
+//apply from: '../publishGhPages.gradle'
 
 dependencies {
     provided 'com.android.support:support-annotations:20.0.0'
@@ -35,13 +35,13 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 20
-    buildToolsVersion '20.0.0'
+    compileSdkVersion Integer.parseInt(project.COMPILE_SDK_VERSION)
+    buildToolsVersion project.BUILD_TOOLS_VERSION
 
     defaultConfig {
-        minSdkVersion 8
+        minSdkVersion Integer.parseInt(project.MIN_SDK_VERSION)
         //noinspection OldTargetApi
-        targetSdkVersion 20
+        targetSdkVersion Integer.parseInt(project.TARGET_SDK_VERSION)
         versionName project.VERSION_NAME
         versionCode Integer.parseInt(new Date().format('yyyyMMddHH'))
     }
